@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>place 2 b</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<% console.log("the data is", data) %>
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Favorites Page</h1>
+        <p><%= user.local.email %></p>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <a href="/profile" class="btn btn-default btn-sm">Profile</a>
+    </div>
+
+    <div class="row">
+
+        <div class="col">
+          <h3>Places of interest</h3>
+          <!-- <p class="place"><%= data %></p> -->
+
+          <ul class="messages">
+            <% if (data.length > 0) { %>
+            <% for(var i=0; i<data.length; i++) {%>
+              <li class="message">
+                <span class="place"><%= data[i].name %></span>
+                <span class="category"><%= data[i].category %></span>
+                <img class="icon" src="<%= data[i].icon %>" >
+                <span class="location"><%= data[i].location %></span>
+                <span class="city"><%= data[i].city %> </span>
+
+              <span class="delete"><i class="fa fa-trash" aria-hidden="true" data-id="<%= data[i]._id %>"></i></span>
+              </li>
+            <% } %>
+            <% } %>
+
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
