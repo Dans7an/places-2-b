@@ -11,8 +11,8 @@ module.exports = function(app, passport, db) {
 
   // PROFILE SECTION =========================
   function searchAPI(place, callback){
-    const foursquareId = 'foursquareId';
-    const foursquareSecret = 'foursquareSecret';
+    const foursquareId = 'API_ID';
+    const foursquareSecret = 'API_SECRET';
     const foursquareUrl = 'https://api.foursquare.com/v2/venues/explore?near=';
     // const url = `${foursquareUrl}${place}&limit=10&client_id=${foursquareId}&client_secret=${foursquareSecret}&v=20201202`
 
